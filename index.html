@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>💖 Love Calculator 💖</h1>
+
+        <div class="form">
+            <input type="text" id="name1" placeholder="Enter first name">
+            <input type="text" id="name2" placeholder="Enter second name">
+            <button onclick="calculateLove()">Calculate Love</button>
+        </div>
+
+        <div class="result" id="result"></div>
+    </div>
+
+    <script>
+        function calculateLove() {
+            const name1 = document.getElementById('name1').value.trim();
+            const name2 = document.getElementById('name2').value.trim();
+            const resultDiv = document.getElementById('result');
+
+            if (name1 === "" || name2 === "") {
+                resultDiv.innerHTML = "Please enter both names!";
+                return;
+            }
+
+            // Generate random percentage between 1 and 100
+            const lovePercentage = Math.floor(Math.random() * 101);
+
+            resultDiv.innerHTML = `
+                💕 ${name1} + ${name2} = <span class="percentage">${lovePercentage}%</span> 💕
+            `;
+        }
+    </script>
+
+</body>
+</html>
