@@ -1,0 +1,74 @@
+
+/* Background and font */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d?auto=format&fit=crop&w=1470&q=80') no-repeat center center/cover;
+    color: #fff;
+    text-align: center;
+}
+
+/* Container for calculator */
+.container {
+    background: rgba(255, 0, 102, 0.7);
+    /* semi-transparent pink overlay */
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(255, 0, 102, 0.5);
+    max-width: 400px;
+    width: 90%;
+}
+
+/* Heading */
+h1 {
+    margin-bottom: 30px;
+    font-size: 2.5em;
+    text-shadow: 2px 2px 5px #cc0033;
+}
+
+/* Input fields */
+input[type="text"] {
+    padding: 12px;
+    width: 180px;
+    margin: 10px 5px;
+    border-radius: 25px;
+    border: none;
+    outline: none;
+    font-size: 1em;
+}
+
+/* Button */
+button {
+    padding: 12px 25px;
+    border-radius: 25px;
+    border: none;
+    background: #ff4d79;
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: 0.3s;
+    box-shadow: 0 4px 8px rgba(255, 77, 121, 0.4);
+}
+
+button:hover {
+    background: #cc0033;
+    box-shadow: 0 6px 12px rgba(204, 0, 51, 0.6);
+}
+
+/* Result */
+.result {
+    margin-top: 30px;
+    font-size: 1.5em;
+    text-shadow: 1px 1px 4px #cc0033;
+}
+
+.percentage {
+    font-weight: bold;
+    color: #ffeb3b;
+    /* bright yellow for love percentage */
+}
