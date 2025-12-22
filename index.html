@@ -6,7 +6,9 @@
     <title>Love Calculator</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+
 <!-- BACK TO PORTAL BUTTON -->
 <button class="back-btn" onclick="goToPortal()">⬅ Back</button>
 
@@ -29,68 +31,42 @@
 </style>
 
 <script>
-function goToPortal() {
-    window.location.href = "../projects.html";
-}
+  function goToPortal() {
+    window.location.href = "https://koushikgdk-tech.github.io/project-portal/";
+  }
 </script>
 
-    <div class="container">
-        <h1>💖 Love Calculator 💖</h1>
+<div class="container">
+    <h1>💖 Love Calculator 💖</h1>
 
-        <div class="form">
-            <input type="text" id="name1" placeholder="Enter first name">
-            <input type="text" id="name2" placeholder="Enter second name">
-            <button onclick="calculateLove()">Calculate Love</button>
-        </div>
-
-        <div class="result" id="result"></div>
+    <div class="form">
+        <input type="text" id="name1" placeholder="Enter first name">
+        <input type="text" id="name2" placeholder="Enter second name">
+        <button onclick="calculateLove()">Calculate Love</button>
     </div>
 
-    <script>
-        function calculateLove() {
-            const name1 = document.getElementById('name1').value.trim();
-            const name2 = document.getElementById('name2').value.trim();
-            const resultDiv = document.getElementById('result');
+    <div class="result" id="result"></div>
+</div>
 
-            if (name1 === "" || name2 === "") {
-                resultDiv.innerHTML = "Please enter both names!";
-                return;
-            }
+<script>
+    function calculateLove() {
+        const name1 = document.getElementById('name1').value.trim();
+        const name2 = document.getElementById('name2').value.trim();
+        const resultDiv = document.getElementById('result');
 
-            // Generate random percentage between 1 and 100
-            const lovePercentage = Math.floor(Math.random() * 101);
-
-            resultDiv.innerHTML = `
-                💕 ${name1} + ${name2} = <span class="percentage">${lovePercentage}%</span> 💕
-            `;
+        if (name1 === "" || name2 === "") {
+            resultDiv.innerHTML = "Please enter both names!";
+            return;
         }
-    </script>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>My Project</title>
-</head>
 
-<body>
+        const lovePercentage = Math.floor(Math.random() * 101);
 
-  <!-- Back Button -->
-  <button onclick="goToPortal()">⬅ Back to Portal</button>
-
-  <!-- JavaScript -->
-  <script>
-    function goToPortal() {
-      window.location.href = "https://koushikgdk-tech.github.io/project-portal/";
+        resultDiv.innerHTML = `
+            💕 ${name1} + ${name2} = 
+            <span class="percentage">${lovePercentage}%</span> 💕
+        `;
     }
-  </script>
+</script>
 
 </body>
 </html>
-</body>
-
-</html>
-
-
-
-
-
